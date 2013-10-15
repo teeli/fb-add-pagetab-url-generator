@@ -1,0 +1,105 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>pagetab_url_generator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>&ldquo;Add Pagetab&rdquo; URL Generator</h1>
+
+        <p class="lead">Generate URLs to add your Facebook apps as page tab.</p>
+    </div>
+
+        <form role="form" class="form-horizontal">
+            <div class="form-group">
+                <label for="appid" class="col-lg-2 control-label">AppId</label>
+
+                <div class="col-lg-10">
+                    <input type="text" id="appid" name="appid" class="form-control appid"
+                           placeholder="Application's ID">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="uri" class="col-lg-2 control-label">Redirect URI</label>
+
+                <div class="col-lg-10">
+                    <input type="text" id="uri" name="uri" class="form-control uri"
+                           placeholder="http://example.com/path/to/your/app">
+
+                    <p class="help-block">This should be a URL that belongs to your application and is defined in the
+                        settings.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">URL</label>
+
+                <div class="col-lg-10">
+                    <p class="form-control-static" id="pagetab_uri"></p>
+                </div>
+            </div>
+        </form>
+
+    <footer class="footer">
+        <p>
+            Brought to you by <a href="http://www.aciddose.org/" target="_blank">Aciddose</a>.
+            Licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>.
+            Source code available in <a href="" target="_blank" class="github">Github</a>
+        </p>
+
+    </footer>
+</div>
+
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/jquery.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+                function () {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+</script>
+
+<!-- build:js scripts/main.js -->
+<script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+<!-- endbuild -->
+</body>
+</html>

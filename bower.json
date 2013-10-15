@@ -1,0 +1,11 @@
+{
+  "name": "pagetab-url-generator",
+  "version": "1.0.0",
+  "dependencies": {
+    "sass-bootstrap": "~3.*",
+    "requirejs": "~2.1.*",
+    "modernizr": "~2.6.*",
+    "jquery": "~1.10.*"
+  },
+  "devDependencies": {}
+}
