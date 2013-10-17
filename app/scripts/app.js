@@ -2,10 +2,15 @@
 define([], function () {
     'use strict';
 
-    $('input').keyup(function () {
+    var updateURL = function () {
+        var appId = $('input.appid').val();
+        var uri = $('input.uri').val() || 'http://www.facebook.com/';
         var url = 'https://www.facebook.com/dialog/pagetab?' +
-            'app_id=' + $('input.appid').val() + '&' +
-            'redirect_uri=' + encodeURIComponent($('input.uri').val());
+            'app_id=' + appId + '&' +
+            'redirect_uri=' + encodeURIComponent(uri);
         $('#pagetab_uri').html('<p><a href="' + url + '" target="_blank">' + url + '</a></p>');
-    });
+    };
+
+    $('input').keyup(updateURL);
+    updateURL();
 });
